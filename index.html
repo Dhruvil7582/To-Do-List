@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My To-Do List</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>My Tasks</h1>
+      <p id="date-label"></p>
+    </div>
+
+    <div class="input-row">
+      <input class="todo-input" id="task-input" type="text" placeholder="Add a new task..." />
+      <select class="priority-select" id="priority-select">
+        <option value="low">Low</option>
+        <option value="medium" selected>Medium</option>
+        <option value="high">High</option>
+      </select>
+      <button class="add-btn" onclick="addTask()">
+        <i class="fa-solid fa-plus"></i> Add
+      </button>
+    </div>
+
+    <div class="filters">
+      <button class="filter-btn active" onclick="setFilter('all', this)">All</button>
+      <button class="filter-btn" onclick="setFilter('active', this)">Active</button>
+      <button class="filter-btn" onclick="setFilter('done', this)">Completed</button>
+      <button class="filter-btn" onclick="setFilter('high', this)">High Priority</button>
+    </div>
+
+    <ul class="task-list" id="task-list"></ul>
+
+    <div class="footer-row">
+      <span class="footer-count" id="footer-count"></span>
+      <button class="clear-btn" onclick="clearDone()">Clear completed</button>
+    </div>
+  </div>
+</body>
+</html>
