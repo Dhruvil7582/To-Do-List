@@ -50,7 +50,7 @@ No installation or setup required.
 
 ```
 To-Do-List/
-└── index.html.html
+└── index.html
 └── style.css
 └── script.js
 └── README.md         # You are here
